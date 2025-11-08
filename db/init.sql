@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS products (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100),
+  price INTEGER
+);
+
+CREATE TABLE IF NOT EXISTS transactions (
+  id SERIAL PRIMARY KEY,
+  user_id INTEGER,
+  amount INTEGER,
+  status VARCHAR(20),
+  createdat TIMESTAMP DEFAULT CURRENTTIMESTAMP
+);
